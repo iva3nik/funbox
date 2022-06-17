@@ -1,0 +1,101 @@
+.pentagon {
+  clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 9%, 14% 0%);
+}
+
+.card {
+  font-family: "Trebuchet MS", serif;
+  font-style: normal;
+
+  &__main {
+    background-color: #1698d9;
+    width: 320px;
+    height: 480px;
+    position: relative;
+    border-radius: 12px;
+  }
+
+  &__content {
+    border-radius: 8px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background-color: #f2f2f2;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background-image: url("../../assets//img/cat.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+    margin: 21px 0 5px;
+
+    &:last-of-type {
+      margin: 15px 0 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000;
+  }
+
+  &__kilo {
+    align-self: end;
+    width: 80px;
+    height: 80px;
+    background-color: #1698d9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin: 16px;
+
+    p {
+      margin-top: 20px;
+      font-size: 42px;
+      line-height: 22px;
+      text-align: center;
+
+      span {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &__buy {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+    margin: 14px 0 0;
+    text-align: center;
+
+    span {
+      color: #1698d9;
+    }
+  }
+
+  &__dashed {
+    border-bottom: 1px dashed #1698d9;
+  }
+}
