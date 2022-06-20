@@ -1,11 +1,9 @@
 import React from "react";
 import cn from "classnames";
 
-import cat from "../../assets/img/cat.png";
-
 import s from "./Card.module.scss";
 
-const Card = () => {
+const Card = ({ card }) => {
   return (
     <div className={s.card}>
       <div className={cn(s.card__main, s.pentagon)}>
@@ -13,14 +11,17 @@ const Card = () => {
           <div>
             <p className={s.card__text}>Сказочное заморское яство</p>
             <h2 className={s.card__title}>Нямушка</h2>
-            <h3 className={s.card__subtitle}>с фуа-гра</h3>
+            <h3 className={s.card__subtitle}>с {card.with}</h3>
             <p className={s.card__text}>
-              10 порций <br /> мышь в подарок
+              {card.amount} порций <br /> {card.gift} в подарок <br />{" "}
+              {card.addition && card.addition}
             </p>
           </div>
           <div className={s.card__kilo}>
             <p>
-              0,5 <span>кг</span>
+              {card.kilo}
+              <br />
+              <span>кг</span>
             </p>
           </div>
         </div>
