@@ -7,11 +7,45 @@
   font-style: normal;
 
   &__main {
+    cursor: pointer;
     background-color: #1698d9;
     width: 320px;
     height: 480px;
     position: relative;
     border-radius: 12px;
+
+    &:hover {
+      background-color: #d91667;
+
+      .card__kilo {
+        background-color: #d91667;
+      }
+    }
+
+    &_type_disabled {
+      &:hover {
+        background-color: #b3b3b3;
+
+        .card__kilo {
+          background-color: #b3b3b3;
+        }
+      }
+
+      opacity: 0.6;
+      background-color: #b3b3b3;
+
+      .card__kilo {
+        background-color: #b3b3b3;
+      }
+    }
+
+    &_type_chosen {
+      background-color: #d91667;
+
+      .card__kilo {
+        background-color: #d91667;
+      }
+    }
   }
 
   &__content {
@@ -84,6 +118,7 @@
   }
 
   &__buy {
+    cursor: pointer;
     font-weight: normal;
     font-size: 13px;
     line-height: 15px;
@@ -93,6 +128,14 @@
 
     span {
       color: #1698d9;
+
+      &:hover {
+        color: #d91667;
+      }
+    }
+
+    &_type_empty {
+      color: #ffff66;
     }
   }
 
